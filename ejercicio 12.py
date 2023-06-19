@@ -1,25 +1,25 @@
 #elabore un algoritmo que pida las 4 notas de n estudiantes e imprima las notas mas alta, la mas baja y el promedio.
 
-n = int(input("Ingrese la cantidad de estudiantes: "))
+cantidad = int(input("Ingrese la cantidad de estudiantes: "))
 
-notas_mas_altas = []
-notas_mas_bajas = []
+notasAltas = []
+notasBajas = []
 promedios = []
 
-for i in range(n):
+for i in range(cantidad):
     notas = []
     for j in range(4):
         nota = float(input("Ingrese la nota {} del estudiante {}: ".format(j+1, i+1)))
         notas += [nota]
 
-    notas_mas_altas += [max(notas)]
-    notas_mas_bajas += [min(notas)]
+    notasAltas += [max(notas)]
+    notasBajas += [min(notas)]
     promedios += [sum(notas) / 4]
 
-nota_mas_alta_general = max(notas_mas_altas)
-nota_mas_baja_general = min(notas_mas_bajas)
-promedio_general = sum(promedios) / n
+notaAltaGeneral = max(notasAltas)
+notaBajaGeneral = min(notasBajas)
+promedioGeneral = sum(promedios) / cantidad
 
-print("La nota más alta es:", nota_mas_alta_general)
-print("La nota más baja es:", nota_mas_baja_general)
-print("El promedio general es:", promedio_general)
+print("La nota más alta es:", notaAltaGeneral)
+print("La nota más baja es:", notaBajaGeneral)
+print("El promedio general es:", promedioGeneral)
